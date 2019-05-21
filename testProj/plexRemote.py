@@ -8,7 +8,7 @@ from collections import defaultdict
 from json import load, dump
 
 
-def json_save(self, data, fname):
+def json_save(data, fname):
     with open(fname, 'w') as fp:
         dump(data, fp)
 
@@ -38,9 +38,11 @@ titles = defaultdict(list)
 count = 0
 songs = {}
 for artist in root:
+    songs[artist.get("title")] = {}
     artist_uri = get_tokenized_uri(artist.get("key"))
     plexalbums = ET.fromstring( requests.get( artist_uri ).text)
     for album in plexalbums:
+        songs[artist.get("title")][album.get("title")] = []
         album_uri = get_tokenized_uri(album.get("key"))
         plexsongs = ET.fromstring(requests.get(album_uri).text)
         for songmeta in plexsongs:
@@ -48,10 +50,9 @@ for artist in root:
             song = ET.fromstring(requests.get(song_uri).text)
             for p in song.iter("Part"):
                 title = songmeta.get("title")
-                file = p.get("key")
-                songs[artist.get("title")] = {}
-                songs[artist.get("title")][album.get("title")] = []
+                file = get_tokenized_uri(p.get("key"))
                 songs[artist.get("title")][album.get("title")].append([title, file])
+                # print(songs)
                 # albums[album.get("title")].append(file)
                 # artists[artist.get("title")].append(file)
                 # titles[song.get("title")].append(file)
