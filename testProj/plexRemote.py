@@ -7,7 +7,27 @@ import requests
 from collections import defaultdict
 from json import load, dump
 
+from plexapi.myplex import MyPlexAccount
+from plexapi.server import PlexServer
 
+
+
+token = "y9pLd6uPWXpwbw14sRYf"
+plexurl = "http://plex.colarietitosti.info:32400"
+"""
+plex = PlexServer(plexurl, token)
+
+#client = plex.client("Plex Client")
+
+section = plex.library.section('Music')
+tracks = section.searchArtists()[0]
+#print(section.searchTracks())
+
+#client = plex.client(section)
+
+print(tracks.key)
+print(tracks.title)
+"""
 def json_save(data, fname):
     with open(fname, 'w') as fp:
         dump(data, fp)
@@ -15,10 +35,6 @@ def json_save(data, fname):
 
 def get_tokenized_uri(uri):
     return plexurl+uri+token
-
-
-token = "?X-Plex-Token=y9pLd6uPWXpwbw14sRYf"
-plexurl = "http://plex.colarietitosti.info:32400"
 
 
 xml = requests.get(get_tokenized_uri("/library/sections")).text

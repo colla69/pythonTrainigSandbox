@@ -10,5 +10,5 @@ def json_load(fname):
     with open(fname, 'r') as fp:
         return load(fp)
 
-data = json_load("/media/cola/Data/Music/data.json")
+data = json_load("~/.config/p")
 print(data)
