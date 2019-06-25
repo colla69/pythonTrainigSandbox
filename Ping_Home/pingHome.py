@@ -1,18 +1,27 @@
-
-import schedule
+from apscheduler.schedulers.background import BlockingScheduler
 import mechanicalsoup
 import time
 
+scheduler = BlockingScheduler()
+job = None
+
 def ping_dash(*args, **kwargs):
-    print('pinging dashboard..')
     link = "https://dash.colarietitosti.info/ip/"
     browser = mechanicalsoup.StatefulBrowser()
     browser.open(link)
-    browser.get_current_page()
+    browser.get_current_page()    
+    print("done!\n")
 
 
-schedule.every(60).seconds.do(ping_dash)
+def start_job():
+    global job
+    scheduler.add_job(ping_dash, 'interval', seconds=86400)
+    ping_dash()
+    try:
+        scheduler.start()
+    except:
+        pass
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+start_job()
+
+
