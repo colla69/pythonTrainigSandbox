@@ -15,7 +15,7 @@ def ping_dash(*args, **kwargs):
 
 def start_job():
     global job
-    scheduler.add_job(ping_dash, 'interval', seconds=86400)
+    scheduler.add_job(ping_dash, 'interval', seconds=3600)
     ping_dash()
     try:
         scheduler.start()
