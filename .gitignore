@@ -1,2 +1,6 @@
 psw.py
 LinkedinJobs/
+venv/
+.venv/
+testProj/Pastebin/files/
+testProj/Pastebin/_files/

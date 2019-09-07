@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Wunderlist: Your beautiful and simple online to-do list app</title>
+
+    <!-- Meta Descriptors -->
+    <meta name="description" content="Over 13 million people already use Wunderlist to manage tasks, to-do lists, and to get things done.  Wunderlist is the best to-do list for you, your team or your family." />
+    <meta name="thumbnail" content="https://www.wunderlist.com/icon.png" />
+
+    <link rel="author" href="humans.txt" />
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="google" value="notranslate" />
+
+    <meta name="apple-itunes-app" content="app-id=406644151">
+
+    <!-- Google Webmaster Tools DO NOT REMOVE -->
+    <meta name="google-site-verification" content="Ra-CDN32q8k5C3YzXgNxRj75pvM1qyp5UXna3XJ5qHo" />
+    <!-- Pinned Site -->
+    <!-- Main Data -->
+    <meta name="application-name" content="Wunderlist" />
+    <meta name="msapplication-tooltip" content="Wunderlist 2" />
+    <meta name="msapplication-TileColor" content="#6176ff"/>
+    <meta name="msapplication-TileImage" content="f417268b-81a2-43e0-a800-60bf210ad5a1.png"/>
+    <meta name="msapplication-starturl" content="./" />
+
+    <!-- Pinned Site Tasks -->
+    <meta content="name=Inbox;
+      action-uri=./#/lists/inbox;
+      icon-uri=//static.wunderlist.com/44685ca8cfaade90d24f718bf876257562a21214/images/favicon.ico;
+      window-type=self;" name="msapplication-task" />
+    <meta content="name=Starred;
+      action-uri=./#/lists/starred;
+      icon-uri=//static.wunderlist.com/44685ca8cfaade90d24f718bf876257562a21214/images/favicon.ico;
+      window-type=self;" name="msapplication-task" />
+    <meta content="name=Today;
+      action-uri=./#/lists/today;
+      icon-uri=//static.wunderlist.com/44685ca8cfaade90d24f718bf876257562a21214/images/favicon.ico;
+      window-type=self;" name="msapplication-task" />
+    <meta content="name=Week;
+      action-uri=./#/lists/week;
+      icon-uri=//static.wunderlist.com/44685ca8cfaade90d24f718bf876257562a21214/images/favicon.ico;
+      window-type=self;" name="msapplication-task" />
+    <meta content="name=All;
+      action-uri=./#/lists/all;
+      icon-uri=//static.wunderlist.com/44685ca8cfaade90d24f718bf876257562a21214/images/favicon.ico;
+      window-type=self;" name="msapplication-task" />
+    <meta content="name=Completed;
+      action-uri=./#/lists/completed;
+      icon-uri=//static.wunderlist.com/44685ca8cfaade90d24f718bf876257562a21214/images/favicon.ico;
+      window-type=self;" name="msapplication-task" />
+    <!-- End Pinned Site -->
+    <link rel="icon" href="//static.wunderlist.com/44685ca8cfaade90d24f718bf876257562a21214/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="//static.wunderlist.com/5a1849ec3ae07007b2b974e82164c9589d7b21e6/images/icon.png"/>
+    <!-- for installable chrome app -->
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fjliknjliaohjgjajlgolhijphojjdkc"/>
+    <!-- for installable add to wunderlist chrome extension -->
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/dmnddeddcgdllibmaodanoonljfdmooc"/>
+    <style type="text/css" media="all">
+
+      @font-face {
+
+        font-family: 'Wundercon-Pictograms';
+        src: url('//static.wunderlist.com/f20b434d7c02cbea5fdb73e0e92868546c976b3b/fonts/Wundercon-Pictograms.eot');
+        src: local('☺'),
+             url('//static.wunderlist.com/30946e32c9fd50fb9f6605f8128c492bc7db75f2/fonts/Wundercon-Pictograms.woff') format('woff'),
+             url('//static.wunderlist.com/a74caeab0d59cf9b3c94b633219eb2e3ff7b4484/fonts/Wundercon-Pictograms.ttf') format('truetype'),
+             url('//static.wunderlist.com/ec47c441ecccf832fbc749e8667b803115609093/fonts/Wundercon-Pictograms.svg') format('svg'),
+             url('//static.wunderlist.com/f20b434d7c02cbea5fdb73e0e92868546c976b3b/fonts/Wundercon-Pictograms.eot?#iefix') format('embedded-opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    </style>
+    <!--[if lt IE 10]>
+      <script type="text/javascript">
+        this.kaputBrowser=true;
+        document.createElement("text");
+      </script>
+    <![endif]-->
+    <script type="text/javascript">this.gitHash = '3.19.30 [5b05ce5bf1e05073eba700a03c3c522d65954f6e] Tue Aug 13 2019 @ 15:21:59 GMT+0200 (CEST)';</script>
+    <script type="text/javascript">
+
+  if (window.kaputBrowser) {
+    window.location = '/unsupported';
+  }
+
+  // taken from the website loginAppView
+  function appendScript (url, callback) {
+
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+
+    var link = document.createElement('a');
+    link.href = url;
+    if (link.host !== location.host) {
+      script.crossOrigin = 'anonymous';
+    }
+
+    if (script.readyState) {  //IE
+      script.onreadystatechange = function () {
+        var state = script.readyState;
+        if (state == "loaded" || state == "complete"){
+          script.onreadystatechange = null;
+          callback && callback();
+        }
+      };
+    } else {
+      script.onload = function () {
+        callback && callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  var href = window.location.href;
+  var hash = window.location.hash.replace('#/', '');
+  var application;
+
+  var routes = {
+  "welcome": "login",
+  "login": "login",
+  "logout": "login",
+  "signup": "login",
+  "forgot-password": "login",
+  "forgot/password": "login",
+  "connect": "login",
+  "start": "main",
+  "setup": "main",
+  "shared": "main"
+};
+  var apps = {
+  "libs.js": "eb16486b4bf259b1dac92756dbebaae043d63548/libs.js",
+  "apps/login.js": "0065d81e6a8eca12db1146dcc47287bb6ac7122f/apps/login.js",
+  "apps/main.js": "ded3da44b329ae6a3cf4ae3f473ed260869a9d3f/apps/main.js"
+};
+  var baseUrl = '//static.wunderlist.com/';
+  var configPath = '/config.js?bust=' + (new Date()).valueOf();
+
+  var name;
+  // if the route matches one in the map above, load the sandboxed app
+  for (var route in routes) {
+    name = routes[route];
+    if (hash.indexOf(route) === 0) {
+      application = name;
+    }
+  }
+
+  // if still no app, load main
+  if (!application || application === 'login') {
+    application = 'main';
+  }
+
+  function isMobile () {
+
+    var agent = window.navigator.userAgent;
+    var platforms = [
+      'Android', 'webOS', 'iPhone', 'iPad',
+      'iPod', 'Blackberry', 'Windows Phone'
+    ];
+    var expression = new RegExp(platforms.join('|'), 'i');
+
+    return agent.match(expression);
+  }
+
+  // start up which ever application
+  function start (application) {
+
+    appendScript(configPath, function () {
+
+      requirejs([
+        'vendor/jquery',
+        'vendor/ua-detector'
+      ], function ($, UA) {
+
+        // If a browser we do not support the app in:
+        // Latest FF ESR is 17, anything below 16 we do not support.
+        var browser = UA.browser.toLowerCase();
+        var badFirefox = browser === 'firefox' && UA.version < 16;
+        var badChrome = browser === 'chrome' && UA.version < 27;
+        var badSafari = browser === 'safari' && UA.version <= 6;
+        if (isMobile() || window.kaputBrowser || badFirefox || badChrome || badSafari || !('localStorage' in window)) {
+          window.location = '/unsupported?path=' + hash;
+        } else {
+          $(function() {
+            appendScript(baseUrl + apps['apps/' + application + '.js'])
+          });
+        }
+      });
+    });
+  }
+
+  appendScript(baseUrl + apps['libs.js'], function () {
+    start(application);
+  });
+</script>
+
+  </head>
+  <body class="wlapp-parent" style="opacity:0;"></body>
+</html>
